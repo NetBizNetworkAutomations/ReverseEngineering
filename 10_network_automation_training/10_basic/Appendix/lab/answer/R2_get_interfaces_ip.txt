@@ -1,0 +1,30 @@
+{
+    "GigabitEthernet0/0": {
+        "ipv4": {
+            "172.16.1.2": {
+                "prefix_length": 24
+            }
+        }
+    },
+    "GigabitEthernet0/1": {
+        "ipv4": {
+            "192.168.100.2": {
+                "prefix_length": 24
+            }
+        }
+    },
+    "Loopback0": {
+        "ipv4": {
+            "2.2.2.2": {
+                "prefix_length": 32
+            }
+        }
+    },
+    "Loopback3": {
+        "ipv4": {
+            "3.3.3.3": {
+                "prefix_length": 32
+            }
+        }
+    }
+}
