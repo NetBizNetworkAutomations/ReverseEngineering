@@ -1,0 +1,3 @@
+hostname,ip address,telnet password,secret password
+R1,172.16.1.1,python,cisco
+R2,172.16.1.2,python,cisco

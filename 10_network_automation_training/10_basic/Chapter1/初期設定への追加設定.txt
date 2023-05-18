@@ -1,0 +1,26 @@
+■NTPやsyslogなど基本的な設定の追加追加（R1とR2共通）
+	clock timezone JST 9
+	ntp server 192.168.100.254
+	service timestamps debug datetime msec localtime
+	service timestamps log datetime msec localtime
+	
+■スタティックルートの追加
+R1
+	ip route 192.168.100.0 255.255.255.0 172.16.1.2
+	ip route 192.168.200.0 255.255.255.0 172.16.1.2
+	ip route 2.2.2.2 255.255.255.255 172.16.1.2
+	ip route 200.200.200.200 255.255.255.255 172.16.1.2
+
+R2
+	ip route 1.1.1.1 255.255.255.255 172.16.1.1
+	ip route 192.168.200.0 255.255.255.0 192.168.100.254
+	ip route 200.200.200.200 255.255.255.255 192.168.100.254
+
+■loopback0の追加
+R1
+	int lo0
+	ip add 1.1.1.1 255.255.255.255
+
+R2
+	int lo0
+	ip add 2.2.2.2 255.255.255.255
