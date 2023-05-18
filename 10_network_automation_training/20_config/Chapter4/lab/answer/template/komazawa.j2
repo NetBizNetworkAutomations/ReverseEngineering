@@ -1,0 +1,17 @@
+hostname {{ name }}
+!
+enable secret {{ secret_pass }}
+!
+interface {{ int_name }}
+ ip address {{ ip_address }} {{ mask }}
+ {{ status }}
+!
+{%- for x in route %}
+ip route {{ x.ip }} {{ x.mask }} {{ x.next_hop }}
+{%- endfor %}
+!
+line con 0
+ password {{ console_pass }}
+ login
+!
+end

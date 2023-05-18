@@ -1,0 +1,9 @@
+hostname {{ name }}
+!
+{%- for x in int %}
+interface {{ x.name }}
+ switchport access vlan {{ x.vlan }}
+ no shutdown
+!
+{%- endfor %}
+end

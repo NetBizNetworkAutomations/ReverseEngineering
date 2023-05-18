@@ -1,0 +1,11 @@
+hostname {{ name }}
+!
+enable secret {{ secret_pass }}
+!
+ntp server {{ ntp }}
+!
+line vty 0 4
+ password {{ vty_pass }}
+ login
+!
+end

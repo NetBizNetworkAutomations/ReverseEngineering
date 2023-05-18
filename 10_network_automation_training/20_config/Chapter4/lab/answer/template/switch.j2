@@ -1,0 +1,12 @@
+hostname {{ name }}
+!
+vtp domain {{ domain }}
+vtp mode {{ vtp }}
+!
+spanning-tree mode {{ stp }}
+!
+interface {{ int_name }}
+ switchport access vlan {{ vlan }}
+ switchport mode {{ switchport }}
+!
+end

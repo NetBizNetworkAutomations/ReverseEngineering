@@ -1,0 +1,24 @@
+hostname {{ name }}
+!
+enable secret {{ secret_pass }}
+!
+{%- for x in int %}
+interface {{ x.int_name }}
+ ip address {{ x.ip_address }} {{ x.mask }}
+ {{ x.status }}
+!
+{%- endfor %}
+router ospf {{ process }}
+ router-id {{ router_id }}
+{%- for x in ospf %}
+ network {{ x.network }} {{ x.wildmask }} area {{ x.area }}
+{%- endfor %}
+!
+line con 0
+ password {{ console_pass }}
+ login
+!
+line vty 0 4
+ password {{ vty_pass }}
+ login
+end

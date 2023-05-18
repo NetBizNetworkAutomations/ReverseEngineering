@@ -1,0 +1,9 @@
+hostname {{ name }}
+!
+{%- for x in int %}
+interface {{ x.name }}
+ ip address {{ x.ip_address }} {{ x.mask }}
+ no shutdown
+!
+{%- endfor %}
+end

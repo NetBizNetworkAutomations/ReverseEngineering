@@ -1,0 +1,13 @@
+hostname {{ host }}
+!
+enable secret {{ secret_pass }}
+!
+interfae gi0/0
+ ip address {{ ip_address }} {{ mask }}
+ no shutdown
+!
+line con0
+ password {{ console_pass }}
+ login
+!
+end

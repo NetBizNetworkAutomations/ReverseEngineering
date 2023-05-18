@@ -1,0 +1,15 @@
+hostname {{ name }}
+!
+enable secret {{ secret_pass }}
+!
+{%- for x in int %}
+interface {{ x.int_name }}
+ ip address {{ x.ip_address }} {{ x.mask }}
+ {{ x.status }}
+!
+{%- endfor %}
+line console 0
+ password {{ console_pass }}
+ login
+!
+end
