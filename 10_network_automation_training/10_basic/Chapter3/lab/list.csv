@@ -1,0 +1,3 @@
+RouterName,ip address,enable,vty
+R1,1.1.1.1,cisco,python
+R2,2.2.2.2,cisco,python

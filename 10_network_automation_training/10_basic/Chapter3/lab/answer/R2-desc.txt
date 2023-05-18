@@ -1,0 +1,9 @@
+show int description
+Interface                      Status         Protocol Description
+Em0/0                          admin down     down     
+Gi0/0                          up             up       
+Gi0/1                          up             up       
+Se0/0/0                        admin down     down     
+Se0/0/1                        admin down     down     
+Lo0                            up             up       "This is Test"
+R2#
