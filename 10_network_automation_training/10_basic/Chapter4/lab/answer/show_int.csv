@@ -1,0 +1,8 @@
+intf,ipaddr
+Embedded-Service-Engine0/0,unassigned
+GigabitEthernet0/0,172.16.1.2
+GigabitEthernet0/1,192.168.100.2
+Serial0/0/0,unassigned
+Serial0/0/1,unassigned
+Loopback0,2.2.2.2
+Loopback3,3.3.3.3
