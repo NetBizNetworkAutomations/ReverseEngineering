@@ -1,0 +1,6 @@
+RouterName,ip address
+R1_Router,1.1.1.1
+R2_Router,2.2.2.2
+Branch_Router,100.100.100.100
+Core_Router,200.200.200.200
+InternetRouter,192.168.100.100
