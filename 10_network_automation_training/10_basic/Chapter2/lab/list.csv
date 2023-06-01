@@ -1,5 +1,6 @@
 RouterName,ip address
-R1_Router,192.168.255.52
-R2_Router,192.168.255.246
+R1_Router,192.168.255.100
+R1_Router,172.16.1.1
+R2_Router,192.168.255.200
+R2_Router,172.16.1.2
 Internet,8.8.8.8
-Internet,9.9.9.9

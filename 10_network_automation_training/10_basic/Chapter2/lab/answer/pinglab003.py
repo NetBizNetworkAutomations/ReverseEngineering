@@ -1,7 +1,7 @@
 import subprocess
 import re
 
-hosts = ['100.100.100.100', '192.168.255.52', '192.168.200.2' ]
+hosts = ['100.100.100.100', '192.168.255.100', '192.168.200.2' ]
 
 for host in hosts:
 	p = subprocess.Popen('ping -c5 ' + host, shell=True, stdout = subprocess.PIPE)
