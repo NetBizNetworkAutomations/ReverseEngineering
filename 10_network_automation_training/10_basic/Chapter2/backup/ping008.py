@@ -7,7 +7,7 @@ with open('ip.csv') as f:
 
 	for host in hosts:
 
-		p = subprocess.Popen('ping ' + host['ip'], stdout = subprocess.PIPE) 
+		p = subprocess.Popen('ping -c5 ' + host['ip'], stdout = subprocess.PIPE) 
 		stdout_data, stderr_data = p.communicate()
 		result = re.search('TTL',stdout_data.decode('shift_jis'))
         
