@@ -14,5 +14,5 @@ with open('list.csv', 'r') as f:
 			print(host['RouterName'] + 'へは到達可能です。')
 		elif re.search('到達できません', stdout_data.decode('shift_jis')):
 			print(host['RouterName'] + 'への経路情報がありません。')
-		elif re.search('タイムアウト', stdout_data.decode('shift_jis')):
+		elif re.search('100% packet loss', stdout_data.decode('shift_jis')):
 			print(host['RouterName'] + 'は存在しないかフィルタされている可能性があります。')

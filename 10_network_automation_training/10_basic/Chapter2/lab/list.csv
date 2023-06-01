@@ -2,3 +2,4 @@ RouterName,ip address
 R1_Router,192.168.255.52
 R2_Router,192.168.255.246
 Internet,8.8.8.8
+Internet,9.9.9.9
