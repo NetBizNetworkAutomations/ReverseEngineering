@@ -1,8 +1,8 @@
 from netmiko import ConnectHandler
 
 hosts = [
-			{'hostname':'R2','ip address':'2.2.2.2'},
-			{'hostname':'R1','ip address':'1.1.1.1'},
+			{'hostname':'R2','ip address':'192.168.255.246'},
+			{'hostname':'R1','ip address':'192.168.255.52'},
 		]
 
 for host in hosts:
