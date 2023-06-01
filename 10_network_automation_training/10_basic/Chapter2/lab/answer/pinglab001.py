@@ -1,7 +1,7 @@
 import subprocess
 import re
 
-p = subprocess.Popen('ping -c5 8.8.8.8.8.8.8', shell=True, stdout = subprocess.PIPE)
+p = subprocess.Popen('ping -c5 8.8.8.8', shell=True, stdout = subprocess.PIPE)
 
 stdout_data, stderr_data = p.communicate()
 
