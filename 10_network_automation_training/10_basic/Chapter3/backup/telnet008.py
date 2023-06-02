@@ -2,6 +2,7 @@ from telnetlib import Telnet
 import csv
 
 WAIT_TIME = 3
+WAIT_TIME2 = 10
 
 with open('ip.csv') as f:
 	hosts = csv.DictReader(f)
@@ -24,7 +25,7 @@ with open('ip.csv') as f:
 		tn.read_until(b'#', WAIT_TIME)
 		tn.write(b'show running-config\n')
 
-		result = tn.read_until(b'#', WAIT_TIME)
+		result = tn.read_until(b'#', WAIT_TIME2)
 
 		with open(host['hostname'] + '.cfg', 'w', newline = '\n') as f:
 			f.write((result.decode('utf-8')))
