@@ -4,7 +4,7 @@ import re
 
 device = {
     'device_type': 'cisco_ios_telnet',
-    'host': '10.1.1.254',
+    'host': '192.168.255.100',
     'password': 'python',
     'secret': 'cisco',
 }
