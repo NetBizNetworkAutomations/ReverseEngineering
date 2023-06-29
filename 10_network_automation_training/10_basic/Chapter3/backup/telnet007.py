@@ -14,7 +14,7 @@ tn.write(b'terminal length 0\n')
 tn.read_until(b'>', WAIT_TIME)
 tn.write(b'enable\n')
 
-tn.read_until(b'Passwrd:', WAIT_TIME)
+tn.read_until(b'Password:', WAIT_TIME)
 tn.write(b'cisco\n')
 
 tn.read_until(b'#', WAIT_TIME)
