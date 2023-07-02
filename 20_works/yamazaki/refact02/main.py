@@ -32,7 +32,7 @@ for host in hosts:
     connection.enable()
     
     # コマンド実行結果取得とExcelへの出力
-    commands = ['show interfaces', 'show version']
+    commands = ['show interfaces', 'show ip route']
     ws = execute_commands(connection, commands, ws)
     
     # エクセルファイルの保存
