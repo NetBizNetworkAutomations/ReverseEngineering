@@ -29,14 +29,14 @@ def execute_show_ip_route(connection, cmd, ws, row):
     
     # 取得したデータをExcelに出力する
     for x in output:
-        ws.cell(row, 2).value = x['protocol']
-        ws.cell(row, 3).value = x['network']
+        #ws.cell(row, 2).value = x['protocol']
+        ws.cell(row, 2).value = x['network']
         
         mask = IPNetwork('0.0.0.0/' + x['mask'])
         
-        ws.cell(row, 4).value = str(mask.netmask)
-        ws.cell(row, 5).value = x['nexthop_ip'] or '-'
-        ws.cell(row, 6).value = x['nexthop_if'] or '-'
+        ws.cell(row, 3).value = str(mask.netmask)
+        ws.cell(row, 4).value = x['nexthop_ip'] or '-'
+        #ws.cell(row, 6).value = x['nexthop_if'] or '-'
         
         row += 1
 
@@ -47,6 +47,6 @@ def execute_commands(connection, commands, ws):
         if cmd == 'show interfaces':
             ws, row = execute_show_interfaces(connection, cmd, ws, 17)
         elif cmd == 'show ip route':
-            ws, row = execute_show_ip_route(connection, cmd, ws, 49)
+            ws, row = execute_show_ip_route(connection, cmd, ws, 29)
         # 他のコマンドに対応する場合は、elif節を追加する
     return ws
