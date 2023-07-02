@@ -1,3 +1,3 @@
-hostname,ip,password,secret
-R1,1.1.1.1,python,cisco
-R2,2.2.2.2,python,cisco
+hostname,ip,password,secret,filename
+R1,1.1.1.1,python,cisco,R1.xlsx
+R2,2.2.2.2,python,cisco,R2.xlsx
