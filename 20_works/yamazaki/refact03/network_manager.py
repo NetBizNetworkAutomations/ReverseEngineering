@@ -1,5 +1,3 @@
-from netmiko import ConnectHandler
-
 def create_device(host):
     return {
         'device_type': 'cisco_ios_telnet',

@@ -1,6 +1,7 @@
 import csv
+from netmiko import ConnectHandler
 from network_manager import create_device
-from excel_handler import open_excel, save_excel
+from excel_handler import open_workbook, save_excel
 from cisco_ios.show_interfaces import execute_show_interfaces
 from cisco_ios.show_ip_route import execute_show_ip_route
 
