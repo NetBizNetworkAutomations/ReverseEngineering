@@ -1,15 +1,12 @@
-import csv
 from netmiko import ConnectHandler
-from network_manager import create_device
+from network_manager import create_device, load_hosts
 from excel_handler import open_workbook, save_excel
 from cisco_ios.show_interfaces import execute_show_interfaces
 from cisco_ios.show_ip_route import execute_show_ip_route
 
 def run_reverse_operations():
     # ホスト情報を読み込む
-    with open('hosts.csv', 'r') as f:
-        reader = csv.DictReader(f)
-        hosts = list(reader)
+    hosts = load_hosts('hosts.csv')
 
     # 各ホストに接続し、情報を取得する
     for host in hosts:
