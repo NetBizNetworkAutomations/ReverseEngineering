@@ -1,3 +1,6 @@
+"""
+このモジュールは、一連のホストから取得した設定情報をエクセルへ反映する機能を提供します
+"""
 import configparser
 from netmiko import ConnectHandler
 from network_lib import create_device, load_hosts
@@ -6,7 +9,12 @@ from command_executor import execute_commands
 from check_lib import check_file_exists
 
 def run_reverse_operations():
-    
+    """
+    この関数は以下の処理を実施しています
+    1. 設定ファイルの読み込み
+    2. 設定ファイルで指定されたホスト情報を読み込んで接続
+    3. コマンドの実行と結果のパース、エクセルへの反映を含む一連の操作を実行
+    """
     # 設定ファイルを読み込む
     config_ini_path = 'config.ini'
     try:
