@@ -3,11 +3,20 @@ from netmiko import ConnectHandler
 from network_manager import create_device, load_hosts
 from excel_handler import open_workbook, save_excel
 from command_executor import execute_commands
+from file_check import check_file_exists
 
 def run_reverse_operations():
     # 設定ファイルを読み込む
+    config_ini_path = 'config.ini'
+    try:
+        check_file_exists(config_ini_path)
+    except FileNotFoundError as e:
+        print(e)
+        # ファイルが存在しない場合、ここで処理を終了する
+        return
+    
     config = configparser.ConfigParser()
-    config.read('config.ini')
+    config.read(config_ini_path)
 
     # ホスト情報を読み込む
     hosts = load_hosts(config['DEFAULT']['HostsCSV'])
