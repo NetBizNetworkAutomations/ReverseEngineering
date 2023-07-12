@@ -1,9 +1,9 @@
 import configparser
 from netmiko import ConnectHandler
-from network_manager import create_device, load_hosts
-from excel_handler import open_workbook, save_excel
+from network_lib import create_device, load_hosts
+from excel_lib import open_workbook, save_excel
 from command_executor import execute_commands
-from file_check import check_file_exists
+from check_lib import check_file_exists
 
 def run_reverse_operations():
     # 設定ファイルを読み込む
