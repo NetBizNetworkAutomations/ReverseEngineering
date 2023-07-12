@@ -6,12 +6,13 @@ from command_executor import execute_commands
 from check_lib import check_file_exists
 
 def run_reverse_operations():
+    
     # 設定ファイルを読み込む
     config_ini_path = 'config.ini'
     try:
         check_file_exists(config_ini_path)
-    except FileNotFoundError as e:
-        print(e)
+    except FileNotFoundError as error:
+        print(error)
         # ファイルが存在しない場合、ここで処理を終了する
         return
     
